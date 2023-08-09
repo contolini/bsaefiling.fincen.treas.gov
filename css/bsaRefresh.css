@@ -1,0 +1,131 @@
+#insignia {
+  width: 120px;
+  height: 120px;
+}
+
+.regContext { 
+  display:none;
+  visibility: hidden; 
+}
+
+.serverId {
+	color: #70e17b;
+}
+
+input:not([disabled]):focus,
+select:not([disabled]):focus,
+textarea:not([disabled]):focus,
+button:not([disabled]):focus{
+  outline:0.2rem solid #2491ff;
+}
+
+iframe:focus,
+[href]:focus,
+[tabindex]:focus,
+[contentEditable=true]:focus{
+  outline:0.2rem solid #2491ff;
+}
+
+.usa-focus{
+  outline:0.2rem solid #2491ff;
+}
+
+@media all and (min-width: 64em){
+.usa-header--extended [aria-expanded=true]::after,
+.usa-header--extended .usa-nav__primary-item > .usa-current::after,
+.usa-header--extended .usa-nav__primary-item > .usa-nav__link:hover::after{
+    background-color:#ffbc78;
+  }
+}
+
+@media all and (min-width: 64em){
+  .usa-header--extended .usa-logo{
+    margin:0.5rem 0 0.5rem;
+    max-width:70%;
+  }
+}
+
+@media all and (min-width: 64em){
+  .usa-header--extended .usa-nav{
+    border-top: 0;
+  }
+}
+
+@media all and (min-width: 64em){
+  .usa-nav__primary > .usa-nav__primary-item > a{
+    color:#f0f0f0;
+  }
+  .usa-nav__primary > .usa-nav__primary-item > a:hover{
+    color:#f0f0f0;
+  }
+}
+
+.usa-nav__primary button{
+  color:#f0f0f0;
+}
+
+.usa-nav__primary button:hover{
+  color:#f0f0f0;
+}
+
+@media all and (min-width: 64em){
+  .usa-nav__primary button[aria-expanded=false]{
+    background-image:url("../fonts/angle-arrow-down-white.svg"), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    background-image:url("../fonts/angle-arrow-down-white.svg"), linear-gradient(transparent, transparent);
+  }
+}
+@media all and (min-width: 64em){
+  .usa-nav__primary button[aria-expanded=false]:hover{
+    background-image:url("../fonts/angle-arrow-down-white.svg"), -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
+    background-image:url("../fonts/angle-arrow-down-white.svg"), linear-gradient(transparent, transparent);
+  }
+}
+
+.usa-nav__secondary-links a{
+  color:#f0f0f0;
+}
+.usa-nav__secondary-links a:hover{
+  color: #f0f0f0;
+}
+
+.usa-legend {
+	font-family: Merriweather Web,Georgia,Cambria,Times New Roman,Times,serif;
+}
+
+.usa-legend--sm { /* same as usa-prose h3 */
+  font-size: 1.34rem;
+}
+
+.usa-legend--lg { /* same as usa-prose h2 */
+  font-size:1.95rem;
+}
+
+.usa-label {
+	font-weight: bold;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.usa-footer--slim {
+	background-color: #fff;
+}
+
+.bg-mint-50v {
+	background-color: #008659;
+}
+
+@media (min-width: 64em) {
+	.usa-nav__secondary--private {
+		bottom: 6.5rem;
+	}
+}
+
+.usa-prose>p {
+	max-width: 64rem;
+}
+
+.usa-alert ul {
+	margin-left: 0.75rem;
+}

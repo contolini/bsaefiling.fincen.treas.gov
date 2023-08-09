@@ -1,0 +1,152 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<title>BSA E-Filing System - Download the Forms Reader</title>
+	
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+<link rel="preload" href="uswds/fonts/source-sans-pro/sourcesanspro-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="uswds/fonts/source-sans-pro/sourcesanspro-bold-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="uswds/fonts/merriweather/Latin-Merriweather-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="uswds/fonts/merriweather/Latin-Merriweather-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+
+<link rel="stylesheet" href="css/uswds.min.css">
+<link rel="stylesheet" href="css/bsaRefresh.css">
+
+<script>
+  const publicRootUrl = "https://bsaefiling.fincen.treas.gov/";
+  const privateRootUrl = "https://bsaefiling1.fincen.treas.gov/";
+  const prepPDF = "https://bsaefiling1.fincen.treas.gov/DownloadSaveServlet";
+  const submitPDF = "https://bsaefiling1.fincen.treas.gov/NoRegFilerUpload";
+  const prepSubOnline = "https://bsaefiling1.fincen.treas.gov/lc/content/xfaforms/profiles/htmldefault.html";
+  const checkSubStat = "https://bsaefiling1.fincen.treas.gov/NoRegSubmissionStatusLookup";
+  
+  var newsItemUrl = publicRootUrl + "NewsItem.html?itemId=";
+  var serverId = "";
+  var privateFooter = false;
+</script>
+
+<script type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js" defer="" async=""></script>
+<script type="text/javascript" src="js/BSAEFiling.js" defer="" async=""></script>
+<script type="text/javascript" src="js/noticeUpdate.js"></script>
+</head>
+
+<body>
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<noscript>This web page can be viewed better with javascript enabled.</noscript>
+<div id="headerBlock"></div>  
+  <main id="main-content" class="margin-top-3 margin-bottom-5">
+    <section class="grid-container desktop:width-desktop mobile-lg:width-mobile-lg">
+      <div class="grid-row">
+        <div class="grid-col-auto desktop:grid-col-4 desktop:padding-right-3 mobile-lg:grid-col-auto">
+          <nav aria-label="Secondary navigation">
+            <ul class="usa-sidenav">
+                    <li class="usa-sidenav__item">
+        <a href="javascript:void(0)" id="qlHeading">Quick Links</a>
+        <ul class="usa-sidenav__sublist">
+          <li class="usa-sidenav__item">
+            <a href="SystemRequirements.html">System Requirements</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="DownloadAdobeIns.html" id="adobeInst">Downloading the Adobe Reader</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="NoRegFBARFiler.html">File Individual FBAR</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="FilingInformation.html">Documentation</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="javascript:void(0)" onclick="openExternalPage('https://www.fincen.gov/financial_institutions/msb/msbstateselector.html')">RMSB Website</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="javascript:void(0)" onclick="openExternalPage('https://www.fincen.gov/sites/default/files/shared/FinCENRMSB_ElectronicFilingInstructions.pdf')">RMSB Information</a>
+          </li>
+        </ul>
+      </li>            </ul>
+          </nav>
+        </div>
+        <div class="grid-col usa-prose">
+  
+          
+  <h2>Download the Forms Reader</h2>
+	<p>The required version of the Adobe Reader is 10.0 or higher (Adobe X or XI).</p>
+	<p class="text-bold">NOTE: You do not need to install Adobe Reader if you have Adobe Acrobat version 10.0 or higher installed on your machine. 
+	Adobe Acrobat includes all the reader functionalities.</p> 
+	<br>
+	<p>To determine what version of Adobe Reader is installed on your computer (if any), follow these instructions:</p>
+	
+	<h3>For Windows XP/Windows2000:</h3>
+	<ol>
+		<li>Go to your <span class="text-bold">Start Menu</span>.</li>
+		<li>Select <span class="text-bold">Settings</span> and then <span class="text-bold">Control Panel</span>.</li>
+		<li>In the Control Panel window, select <span class="text-bold">Add or Remove Programs</span>.</li>
+		<li>A list of your currently installed programs will be displayed.</li>
+		<li>If you see Adobe Reader 10.0  or higher (Adobe X or XI) in the list, you have the required software. </li>
+	</ol>
+	
+	<h3>For Windows 7:</h3>
+	<ol>
+		<li>Go to your <span class="text-bold">Start Menu</span>.</li>
+		<li>Select <span class="text-bold">Control Panel</span>.</li>
+		<li>In the Control Panel window, change the <span class="text-bold">View By</span> setting in the right corner from <span class="text-bold">Category</span> to <span class="text-bold">Large Icons</span>.</li>
+		<li>Click on <span class="text-bold">Programs and Features</span>.</li> 
+		<li>A list of your currently installed programs will be displayed.</li>
+		<li>If you see Adobe Reader 10.0 or higher (Adobe X or XI) in the list, you have the required software. </li>
+	</ol>
+	
+	<br>
+	
+	<p>If you do not have this software or specific version on your computer, you may download it for free directly 
+	from the <a href="javascript:openExternalPage('http://get.adobe.com/reader/otherversions')">Adobe website</a>.</p>
+	<p class="text-bold">NOTE: If you are unable to download or install the Adobe Reader, check with your system administrator 
+  to make sure that you have the security permissions to install new programs on your system.</p>
+  
+  <h3>Follow the instructions below to complete the download:</h3>
+	<ol>
+		<li>Go to the <a href="javascript:openExternalPage('http://get.adobe.com/reader/otherversions')">Adobe website</a>.</li>
+		<li>Select your Operating System. If you do not know what Operating System you have, you may find
+			it by following these steps:
+			<ul>
+				<li>Go to your <span class="text-bold">Start Menu</span>.</li>
+				<ol>
+					<li>Select <span class="text-bold">Settings</span> and then <span class="text-bold">Control Panel</span>.</li>
+					<li>In the Control Panel window, select <span class="text-bold">System<!--<span class="text-bold"-->li&gt;
+					</span></li><li>Your <span class="text-bold">System Properties</span> will be displayed within the 
+					<span class="text-bold">General</span> tab selected.</li>
+				</ol>
+				<li>You will find your Operating System information there.</li>
+			</ul>
+		</li><li>Select your Language (English, Spanish, etc).</li>
+		<li>Press <span class="text-bold">Continue</span>.</li>
+		<li>
+  		The available versions of the Adobe Reader will be displayed.
+  		<span class="text-bold">NOTE:</span> Versions 10.0 or higher (Adobe X or XI)  are compatible with the BSA E-Filing system. 
+  		System requirements can be viewed for each of these versions. We recommend use of Versions 10.0 or higher (Adobe X or XI) unless your 
+  		organization or system will not support this version.
+		</li>
+		<li>Select version 10.0 or higher  (Adobe X or XI) and press the <span class="text-bold">Download</span> button.</li>
+		<li>Follow the instructions provided by Adobe to complete your download.</li>
+	</ol>
+	<br>          
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <div id="footer" style="position:relative"></div>
+
+<script src="js/uswds.min.js"></script>
+<script src="js/polyfill.min.js"></script>
+<script src="js/react.production.min.js"></script>
+<script src="js/react-dom.production.min.js"></script>
+<script src="js/footerBlock.js"></script><script src="js/headerBlock.js"></script>  <script>
+    document.getElementById("adobeInst").onclick = function() { return false; }
+    document.getElementById("adobeInst").classList.add("usa-current");
+    document.getElementById("qlHeading").classList.add("usa-current");
+  </script>
+
+
+<script>document.querySelectorAll("a[href]").forEach(link => {link.href=link.href.replace(/^https:\/\/bsaefiling\.fincen\.treas\.gov\//, "./")})</script></body></html>
