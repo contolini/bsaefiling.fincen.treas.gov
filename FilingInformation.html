@@ -1,0 +1,155 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<title>BSA E-Filing System - Filing Information</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+<link rel="preload" href="uswds/fonts/source-sans-pro/sourcesanspro-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="uswds/fonts/source-sans-pro/sourcesanspro-bold-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="uswds/fonts/merriweather/Latin-Merriweather-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="uswds/fonts/merriweather/Latin-Merriweather-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+
+<link rel="stylesheet" href="css/uswds.min.css">
+<link rel="stylesheet" href="css/bsaRefresh.css">
+
+<script>
+  const publicRootUrl = "https://bsaefiling.fincen.treas.gov/";
+  const privateRootUrl = "https://bsaefiling1.fincen.treas.gov/";
+  const prepPDF = "https://bsaefiling1.fincen.treas.gov/DownloadSaveServlet";
+  const submitPDF = "https://bsaefiling1.fincen.treas.gov/NoRegFilerUpload";
+  const prepSubOnline = "https://bsaefiling1.fincen.treas.gov/lc/content/xfaforms/profiles/htmldefault.html";
+  const checkSubStat = "https://bsaefiling1.fincen.treas.gov/NoRegSubmissionStatusLookup";
+  
+  var newsItemUrl = publicRootUrl + "NewsItem.html?itemId=";
+  var serverId = "";
+  var privateFooter = false;
+</script>
+
+<script type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js" defer="" async=""></script>
+<script type="text/javascript" src="js/BSAEFiling.js" defer="" async=""></script>
+<script type="text/javascript" src="js/noticeUpdate.js"></script>
+</head>
+
+<body>
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<noscript>This web page can be viewed better with javascript enabled.</noscript>
+<div id="headerBlock"></div>  
+  <main id="main-content" class="margin-top-3 margin-bottom-5">
+    <section class="grid-container desktop:width-desktop mobile-lg:width-mobile-lg">
+      <div class="grid-row">
+        <div class="tablet:grid-col-4 padding-right-3">
+  <nav aria-label="Secondary navigation">
+    <ul class="usa-sidenav">
+      <li class="usa-sidenav__item">
+        <a href="javascript:void(0)" class="usa-current">Resources</a>
+        <ul class="usa-sidenav__sublist">
+          <li class="usa-sidenav__item">
+            <a href="FilingInformation.html" id="resources1">Filing Information</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="NAICSCodeList.html" id="resources2">NAICS Code List</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="SDTMInfo.html" id="resources3">Secure Direct Transfer Mode</a>
+          </li>
+        </ul>
+      </li>
+            <li class="usa-sidenav__item">
+        <a href="javascript:void(0)" id="qlHeading">Quick Links</a>
+        <ul class="usa-sidenav__sublist">
+          <li class="usa-sidenav__item">
+            <a href="SystemRequirements.html">System Requirements</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="DownloadAdobeIns.html" id="adobeInst">Downloading the Adobe Reader</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="NoRegFBARFiler.html">File Individual FBAR</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="FilingInformation.html">Documentation</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="javascript:void(0)" onclick="openExternalPage('https://www.fincen.gov/financial_institutions/msb/msbstateselector.html')">RMSB Website</a>
+          </li>
+          <li class="usa-sidenav__item">
+            <a href="javascript:void(0)" onclick="openExternalPage('https://www.fincen.gov/sites/default/files/shared/FinCENRMSB_ElectronicFilingInstructions.pdf')">RMSB Information</a>
+          </li>
+        </ul>
+      </li>    </ul>
+  </nav>
+</div>        <div class="grid-col usa-prose">
+          <h2>Filing Information</h2>
+          <p>
+            User guides for BSA E-Filing forms can be accessed below as PDF files.
+            The PDF files will either open in a new tab or download, based on your browser settings.
+          </p>
+          <ul>
+	          <li>
+		          <a class="usa-link" href="XMLUserGuide_FinCEN8300.pdf" rel="noopener" target="_blank">
+		            FinCEN 8300 XML User Guide
+		          </a>
+		        </li>
+            <li>
+		          <a class="usa-link" href="XMLUserGuide_FinCENDOEP.pdf" rel="noopener" target="_blank">
+		            FinCEN DOEP XML User Guide
+		          </a>
+            </li>
+            <li>
+		          <a class="usa-link" href="XMLUserGuide_FinCENSAR.pdf" rel="noopener" target="_blank">
+		            FinCEN SAR XML User Guide
+		          </a>
+            </li>
+            <li>
+		          <a class="usa-link" href="XMLUserGuide_FinCENFBAR.pdf" rel="noopener" target="_blank">
+		            FinCEN FBAR XML User Guide
+		          </a>
+            </li>
+            <li>
+		          <a class="usa-link" href="XMLUserGuide_FinCENCTR.pdf" rel="noopener" target="_blank">
+		            FinCEN CTR XML User Guide
+		          </a>
+            </li>
+            <li>
+		          <a class="usa-link" href="FinCENDOEPElectronicFilingRequirements.pdf" rel="noopener" target="_blank">
+		            FinCEN DOEP non-XML User Guide
+		          </a>
+            </li>
+            <li>
+		          <a class="usa-link" href="TestingProcedures.pdf" rel="noopener" target="_blank">
+		            Batch File Testing Procedures
+		          </a>
+            </li>
+            <li>
+              <span class="usa-link pointer" onclick="openExternalPage('https://www.fincen.gov/sites/default/files/shared/FinCENRMSB_ElectronicFilingInstructions.pdf')">
+                FinCEN RMSB Filing Instructions
+              </span>
+            </li>
+            <li>
+              <span class="usa-link pointer" onclick="openExternalPage('https://www.fincen.gov/financial_institutions/msb/msbstateselector.html')">
+                MSB Registrant Search
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>  
+  
+  <div id="footer" style="position:relative"></div>
+
+<script src="js/uswds.min.js"></script>
+<script src="js/polyfill.min.js"></script>
+<script src="js/react.production.min.js"></script>
+<script src="js/react-dom.production.min.js"></script>
+<script src="js/footerBlock.js"></script><script src="js/headerBlock.js"></script>  
+  <script>
+    document.getElementById("resources1").onclick = function() { return false; }
+    document.getElementById("resources1").classList.add("usa-current");
+  </script>
+
+
+<script>document.querySelectorAll("a[href]").forEach(link => {link.href=link.href.replace(/^https:\/\/bsaefiling\.fincen\.treas\.gov\//, "./")})</script></body></html>
