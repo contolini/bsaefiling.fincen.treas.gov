@@ -11,6 +11,16 @@ var newsroomContents =
 		}, 
 		*/
             {
+                        "date": "20231016", //YYYYMMDD
+                        "title": "FinCEN Provides FBAR Relief to Filers Affected by the Terroristic Action in the State of Israel",
+                        "link": newsItemUrl + "FBAR_Notice_Terroristic_Action_FINAL508.pdf", //File name
+                        "description": "FinCEN announced today that certain individuals and businesses affected by the terroristic action in the State of Israel that are required to file FBARs have until October 7, 2024." +
+                                        "Click on the title link for more information.",
+                        "tags": { //TBD
+                        }
+            },
+
+            {
                         "date": "20231013", //YYYYMMDD
                         "title": "FinCEN Extends FBAR Deadline for Victims of Recent Natural Disasters",
                         "link": newsItemUrl + "FBAR_Notice_Hawaii_Wildfires_Hurricane_Idalia_FINAL508.pdf", //File name
