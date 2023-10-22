@@ -1,138 +1,193 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
   <title>BSA E-Filing System - Welcome to the BSA E-Filing System</title>
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-	  
-	<link rel="stylesheet" href="css/uswds.min.css">
-	<link rel="stylesheet" href="css/bsaRefresh.css">
-	
-	<script type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js" defer="" async=""></script>
-    <script src="js/uswds.min.js" defer="" async=""></script>
-	<script src="js/BSAEFiling.js" defer="" async=""></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+<link rel="preload" href="uswds/fonts/source-sans-pro/sourcesanspro-regular-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="uswds/fonts/source-sans-pro/sourcesanspro-bold-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="uswds/fonts/merriweather/Latin-Merriweather-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="uswds/fonts/merriweather/Latin-Merriweather-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+
+<link rel="stylesheet" href="css/uswds.min.css">
+<link rel="stylesheet" href="css/bsaRefresh.css">
+
+<script>
+  const publicRootUrl = "https://bsaefiling.fincen.treas.gov/";
+  const privateRootUrl = "https://bsaefiling1.fincen.treas.gov/";
+  const prepPDF = "https://bsaefiling1.fincen.treas.gov/DownloadSaveServlet";
+  const submitPDF = "https://bsaefiling1.fincen.treas.gov/NoRegFilerUpload";
+  const prepSubOnline = "https://bsaefiling1.fincen.treas.gov/lc/content/xfaforms/profiles/htmldefault.html";
+  const checkSubStat = "https://bsaefiling1.fincen.treas.gov/NoRegSubmissionStatusLookup";
+  
+  var newsItemUrl = publicRootUrl + "NewsItem.html?itemId=";
+  var serverId = "";
+  var privateFooter = false;
+</script>
+
+<script type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js" defer="" async=""></script>
+<script type="text/javascript" src="js/BSAEFiling.js" defer="" async=""></script>
+<script type="text/javascript" src="js/noticeUpdate.js"></script>
+
+  <style>
+    #grayBack {
+		  background-color: #f0f0f0;
+		}
+		
+		#mainText {
+		  padding: 2rem 3rem 1rem 3rem;
+		}
+		
+		.headingLine {
+		    display: table-cell;
+		    height: 1px;
+		    width: 100%;
+		    position: relative;
+		    vertical-align: middle;
+		}
+		
+		.line {
+		    height: 1px;
+		    border-top: solid 1px #71767a;
+		    display: block;
+		    position: relative;
+		    top: 1px;
+		    width: 100%;
+		}
+		
+		.usa-footer {
+		    background-color: white;
+		}
+		
+		.bsa-celltopheading {
+		  display:table-cell;
+		  margin-top:0px;
+		  padding-right:2px;
+		  font-family:Merriweather Web, Georgia, Cambria, Times New Roman, Times, serif;
+		  font-size:1.34rem;
+		  font-display: swap;
+		  color:#1b1b1b;
+		  white-space: nowrap;
+		}
+		.bsa-cellheading {
+		  margin-top:0.5rem;
+		  font-family:Merriweather Web, Georgia, Cambria, Times New Roman, Times, serif;
+		    font-size:1.04rem;
+		    font-display: swap;
+		    width:20rem;
+		 }
+		
+		.bsa-cellcontent {
+		  width:20rem;
+		  margin-top:0.5rem;
+		    margin-bottom:0
+		}
+		
+		.bsa-media-block {
+		  -webkit-box-flex:1;
+		    -ms-flex:1 0 0px;
+		         flex:1 0 0;
+		    width:auto;
+		    max-width:100%;
+		  margin-top:1.5rem;
+		  margin-bottom:2rem;
+		  padding-top:1rem;
+		  padding-bottom:1rem;
+		  padding-left:1.5rem;
+		  padding-right:1.5rem;
+		  background-color:white;
+		  -webkit-box-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+		          box-shadow:0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+		  cursor: pointer;
+		  overflow:auto;
+		}
+  </style>
+  
+  <script type="text/javascript" src="js/newsroomContents.js"></script>
 </head>
 
-<body>
-  <div class="headerBlockContainer">
-	<div class="usa-banner">
-	  <div class="usa-accordion">
-	    <header class="usa-banner__header">
-	      <div class="usa-banner__inner">
-	        <div class="grid-col-auto">
-	          <img class="usa-banner__header-flag" src="images/us_flag_small.png" alt="U.S. flag">
-	        </div>
-	        <div class="grid-col-fill tablet:grid-col-auto">
-	          <p class="usa-banner__header-text">An official website of the United States government</p>
-	          <p class="usa-banner__header-action" aria-hidden="true">Here's how you know</p>
-	        </div>
-	        <button class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner">
-	          <span class="usa-banner__button-text">Here's how you know</span>
-	        </button>
-	      </div>
-	    </header>
-	    <div class="usa-banner__content usa-accordion__content" id="gov-banner" hidden="">
-	      <div class="grid-row grid-gap-lg">
-	        <div class="usa-banner__guidance tablet:grid-col-6">
-	          <img class="usa-banner__icon usa-media-block__img" src="fonts/icon-dot-gov.svg" alt="Dot gov">
-	          <div class="usa-media-block__body">
-	            <p>
-	              <strong>The .gov means it's official.</strong>
-	              <br><br>
-	              Federal government websites often end in .gov or .mil. Before sharing sensitive information, make sure you're on a federal government site.
-	            </p>
-	          </div>
-	        </div>
-	        <div class="usa-banner__guidance tablet:grid-col-6">
-	          <img class="usa-banner__icon usa-media-block__img" src="fonts/icon-https.svg" alt="Https">
-	          <div class="usa-media-block__body">
-	            <p>
-	              <strong>The site is secure.</strong>
-	              <br><br>
-	              The <strong>https://</strong> ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.
-	            </p>
-	          </div>
-	        </div>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-	  <header class="usa-header usa-header--extended bg-primary">
-		<div class="usa-navbar" style="overflow:hidden;">
-		  <div class="usa-logo" id="extended-logo">
-		    <a href="main_notice.html" title="Home" aria-label="Home" class="display-block">
+<body id="grayBack">
+  <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+<noscript>This web page can be viewed better with javascript enabled.</noscript>
+<div id="headerBlock"></div>  
+  <main id="main-content">
+	  <section class="grid-container usa-section margin-top-5 margin-bottom-5 bg-white shadow-2" id="mainText">
+      <div class="grid-row grid-gap margin-top-1">
+        <div class="tablet:grid-col-6">
+          <div class="grid-row display-block">
+            <p class="bsa-celltopheading">About BSA E-Filing</p>
+            <span class="headingLine">
+              <span class="line"></span>
+            </span>
+          </div>
 		      <div class="grid-row">
-			    <div class="grid-col-3">
-				  <img src="InvalidPage.html" id="insignia" alt="FinCEN insignia">
-			    </div>
-				<div class="grid-col-9 margin-top-4 margin-left-neg-2 text-base-lightest">
-					<div class="grid-row font-serif-2xl text-base-lightest">
-						BSA E-Filing System
-					</div>
-					<div class="grid-row margin-top-1 font-serif-md text-ls-2">
-						Financial Crimes Enforcement Network
-					</div>
-				</div>
-		      </div>
-		    </a>
+	          <p class="padding-top-3 padding-bottom-3 margin-0 font-sans-md line-height-sans-6">
+	            The BSA E-Filing System supports electronic filing of Bank Secrecy Act (BSA) forms (either individually or in batches) through a FinCEN 
+	            secure network. BSA E-Filing provides a faster, more convenient, more secure, and more cost-effective method for submitting BSA forms. 
+	            <a class="usa-link" href="Benefits.html">Learn more about BSA E-Filing here</a>.
+	          </p>
+	        </div>
 	      </div>
-		</div>
-	  </header>
-  </div>
-	    			
-  <main id="main-content" class="margin-top-3 margin-bottom-5">
-    <section class="grid-container desktop:width-desktop mobile-lg:width-mobile-lg">
-      <div class="grid-row">
-        <div class="grid-col usa-prose">
-        
-          <h2>System Maintenance</h2>
-          
-          <p>
-          	Please note, we are currently down for maintenance. 
-          	<br>
-          	We apologize for any inconvenience this may cause. 
-          	<br>
-          	<br>
-          	The system will be available at: 
-          	<br>
-          	<span class="text-bold">Saturday, Oct 21, 2023; 1:00 AM (Eastern Time) </span>
-          </p>
-        
+        <div class="tablet:grid-col-6 font-sans-2xs">
+          <div class="grid-row display-block">
+            <p class="bsa-celltopheading">
+              News
+            </p>
+            <span class="headingLine">
+              <span class="line"></span>
+            </span>
+          </div>
+          <div id="mainNewsReactContainer"></div>
         </div>
       </div>
     </section>
-  </main>  
-  
-  <footer class="usa-footer usa-footer--slim position-fixed pin-bottom width-full">
-    <div class="usa-footer__secondary-section">
-	  <div class="grid-container">
-	    <div class="grid-row grid-gap">
-	      <div class="grid-row mobile-lg:grid-col-5 mobile-lg:grid-gap-2">
-		    <div class="mobile-lg:grid-col-auto">
-		      <img class="width-10" src="InvalidPage.html" alt="FinCEN insignia">
-		    </div>
-		    <div class="mobile-lg:grid-col-auto">
-		      <h3 class="usa-footer__logo-heading desktop:margin-top-3">BSA E-Filing</h3>
-		    </div>
-	      </div>
-	      <div class="mobile-lg:grid-col-7">
-	  	    <div class="grid-row desktop:margin-top-6">
- 			  <div class="grid-col-auto desktop:margin-left-auto">
-                 <a class="text-ink" href="" onclick="this.handleClick('https://www.treasury.gov', e)">U.S. Dept. Of Treasury</a>
-                 &nbsp;|&nbsp;
-                 <a class="text-ink" href="" onclick="this.handleClick('https://www.fincen.gov', e)">FinCEN.gov</a>
-                 &nbsp;|&nbsp;
-                 <a class="text-ink" href="" onclick="this.handleClick('https://www.fincen.gov/privacy-security', e)">Privacy Policy</a>
-                 &nbsp;|&nbsp;
-                 <a class="text-ink" href="" onclick="this.handleClick('https://www.fincen.gov/accessibility', e)">Accessibility</a>
+    <section class="usa-graphic-list usa-section usa-section--dark">
+		  <div class="grid-container">
+        <div class="usa-graphic-list__row grid-row grid-gap">
+          <div class="usa-media-block tablet:grid-col">
+            <a href="NoRegFBARFiler.html"><img class="usa-media-block__img width-15" src="fonts/quickfile_icon.svg" alt="File Button"></a>
+            <div class="usa-media-block__body">
+              <h2 class="usa-graphic-list__heading"><a href="NoRegFBARFiler.html">File FBAR Now</a></h2>
+              <p><span class="text-bold">Filing the FBAR as an Individual?</span> Access and Submit the FinCEN Report 114 FBAR for Individuals</p>
+            </div>
+          </div>
+          <div class="usa-media-block tablet:grid-col">
+            <a href="https://bsaefiling1.fincen.treas.gov/PublicAccess"><img class="usa-media-block__img width-15" src="fonts/login_icon.svg" alt="Login Button"></a>
+            <div class="usa-media-block__body">
+              <h2 class="usa-graphic-list__heading"><a href="https://bsaefiling1.fincen.treas.gov/PublicAccess">Login</a></h2>
+              <p><span class="text-bold">Existing Filer?</span> Login to file BSA forms on behalf of your institution (or client)</p>
+            </div>
+          </div>
+        </div>
+		    <div class="usa-graphic-list__row grid-row grid-gap">
+          <div class="usa-media-block tablet:grid-col">
+            <a href="Help.html"><img class="usa-media-block__img width-15" src="fonts/selfhelp_icon.svg" alt="Self Help Button"></a>
+            <div class="usa-media-block__body">
+              <h2 class="usa-graphic-list__heading"><a href="Help.html">Support Center</a></h2>
+              <p><span class="text-bold">Have a question or issue?</span> Access the support center portal now</p>
+            </div>
+          </div>
+		      <div class="usa-media-block tablet:grid-col">
+		        <a href="https://bsaefiling1.fincen.treas.gov/AddUser"><img class="usa-media-block__img width-15" src="fonts/adduser_icon.svg" alt="Register Button"></a>
+		        <div class="usa-media-block__body">
+		          <h2 class="usa-graphic-list__heading"><a href="https://bsaefiling1.fincen.treas.gov/AddUser">New Filer Enrollment</a></h2>
+		          <p><span class="text-bold">New to BSA E-Filing?</span> Enroll to file BSA forms on behalf of an institution (or client)</p>
+		        </div>
 		      </div>
 		    </div>
-	      </div>
-	    </div>
-	  </div>
-    </div>
-  </footer>
+		  </div>
+		</section>
+  </main>
+  
+  <div id="footer" style="position:relative"></div>
 
+<script src="js/uswds.min.js"></script>
+<script src="js/polyfill.min.js"></script>
+<script src="js/react.production.min.js"></script>
+<script src="js/react-dom.production.min.js"></script>
+<script src="js/footerBlock.js"></script><script src="js/headerBlock.js"></script>  <script src="js/mainNews.js"></script>
 
 <script>document.querySelectorAll("a[href]").forEach(link => {link.href=link.href.replace(/^https:\/\/bsaefiling\.fincen\.treas\.gov\//, "./")})</script></body></html>
