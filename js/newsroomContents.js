@@ -11,6 +11,16 @@ var newsroomContents =
 		}, 
 		*/
             {
+                        "date": "20231220", //YYYYMMDD
+                        "title": "FinCEN Further Extends FBAR Deadline for Certain Financial Professionals",
+                        "link": newsItemUrl + "2023_FBAR_Sign_Auth_Extension_Notice_Final.pdf", //File name
+                        "description": "FinCEN is announcing a further extension of time for certain FBAR filings in light of the NPRM that FinCEN issued on March 10, 2016, which proposes to revise the regulations implementing the BSA requirements regarding FBARs." +
+                                        "Click on the title link for more information.",
+                        "tags": { //TBD
+                        }
+            },
+
+            {
                         "date": "20231016", //YYYYMMDD
                         "title": "FinCEN Provides FBAR Relief to Filers Affected by the Terroristic Action in the State of Israel",
                         "link": newsItemUrl + "FBAR_Notice_Terroristic_Action_FINAL508.pdf", //File name
