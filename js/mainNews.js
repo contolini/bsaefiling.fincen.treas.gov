@@ -18,7 +18,7 @@ var MainNews = function (_React$Component) {
 	_createClass(MainNews, [{
 		key: "render",
 		value: function render() {
-			var MAX_NEWS_ITEMS = 5;
+			var MAX_NEWS_ITEMS = 3;
 			var newsLinks = [];
 
 			for (var newsIndex = 0; newsIndex < MAX_NEWS_ITEMS; newsIndex++) {
@@ -50,7 +50,7 @@ var MainNews = function (_React$Component) {
 				{ className: "grid-row grid-gap" },
 				React.createElement(
 					"div",
-					{ className: "tablet:grid-col padding-3 font-sans-md" },
+					{ className: "tablet:grid-col padding-top-105 padding-bottom-3 font-sans-md" },
 					newsLinks,
 					React.createElement(
 						"div",
